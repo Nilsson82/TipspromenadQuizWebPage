@@ -230,6 +230,14 @@ const questionListModal = document.getElementById("questionListModal");
 const closeModal = document.getElementsByClassName("close")[0];
 
 menyBtn.addEventListener("click", () => {
+  const knockoutAnswerInput = document.getElementById("knockout-answer");
+
+  // Clear the content of on webpage
+  knockoutAnswerInput.disabled = false;
+  knockoutAnswerInput.value = "";
+  resultsContainer.innerHTML = "";
+  knockoutResult.innerHTML = "";
+  
   questionListModal.style.display = "block";
 });
 
@@ -313,6 +321,15 @@ function showResults() {
       // Mark the wrong answer red
       answerContainers[questionNumber].style.color = 'red';
     }
+
+    // Add the following lines of code to disable the input elements
+    const radioButtons = document.querySelectorAll("input[type='radio']");
+    radioButtons.forEach((radio) => {
+      radio.disabled = true;
+    });
+
+    const knockoutAnswerInput = document.getElementById("knockout-answer");
+    knockoutAnswerInput.disabled = true;
   });
 
   const language = navigator.language || navigator.userLanguage;
