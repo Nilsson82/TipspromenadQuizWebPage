@@ -12,7 +12,7 @@
         "question": "Vilken är den högsta berget i världen?",
         "answers": ["K2", "Kilimanjaro", "Mount Everest"],
         "correctAnswer": "Mount Everest",
-        "image": "https://images.pexels.com/photos/15964349/pexels-photo-15964349.jpeg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/View_of_Mount_Everest.jpg"
       },
       {
         "question": "Vilken är världens största sjö?",
@@ -103,7 +103,8 @@
       {
         "question": "Vad heter Venezuelas valuta?",
         "answers": ["Bolívar", "Peso", "Dollar", "Euro"],
-        "correctAnswer": "Bolívar"
+        "correctAnswer": "Bolívar",
+        "image": "https://www.publicdomainpictures.net/pictures/20000/velka/money-background.jpg"
       },
       {
         "question": "Vad heter det högsta berget i Venezuela?",
@@ -113,7 +114,8 @@
           "Pico Bolivar",
           "Mount Chimborazo"
         ],
-        "correctAnswer": "Pico Bolivar"
+        "correctAnswer": "Pico Bolivar",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/El_Pico_Bol%C3%ADvar.jpg"
       },
       {
         "question": "Vad heter det största nationalparken i Venezuela?",
@@ -123,7 +125,8 @@
           "Canaima National Park",
           "Mochima National Park"
         ],
-        "correctAnswer": "Canaima National Park"
+        "correctAnswer": "Canaima National Park",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wadakapiapo_Yuruani_tepuy_2010.jpg/2560px-Wadakapiapo_Yuruani_tepuy_2010.jpg"
       },
       {
         "question": "Vilket land gränsar inte till Venezuela?",
@@ -153,12 +156,14 @@
       {
         "question": "Vad heter den berömda musikstilen från Venezuela?",
         "answers": ["Salsa", "Reggaeton", "Merengue", "Joropo"],
-        "correctAnswer": "Joropo"
+        "correctAnswer": "Joropo",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Girls_dancing_Joropo_at_the_Warairarepano_National_Park.jpg/800px-Girls_dancing_Joropo_at_the_Warairarepano_National_Park.jpg?20170223192436"
       },
       {
         "question": "Vad heter den berömda nationaldansen i Venezuela?",
         "answers": ["Salsa", "Bachata", "Tango", "Samba"],
-        "correctAnswer": "Salsa"
+        "correctAnswer": "Salsa",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Finnish_Dance_Sport_Federation_Salopino_1.jpg/580px-Finnish_Dance_Sport_Federation_Salopino_1.jpg?20210204123017"
       },
       {
         "question": "Vad heter den största flygplatsen i Venezuela?",
