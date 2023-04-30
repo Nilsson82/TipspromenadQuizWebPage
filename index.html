@@ -12,8 +12,14 @@
     <h1>Tipspromenad Quiz</h1>
     <h2 id="listName"></h2>
     <div id="quiz"></div>
-    <button id="submitBtn">Submit</button>
-    <div id="results"></div>
+    <div class="quiz-question">
+      <h2 id="knockout-question"></h2>
+      <p id="knockout-question-text"></p>
+      <input type="number" id="knockout-answer" required>
+    </div>
+    <button id="submitBtn" class="submit-button">Submit</button>
+    <div id="resultsContainer"></div>
+    <div id="knockoutResult"></div>
   </div>
   <script src="script.js"></script>
   <div id="questionListModal" class="modal">

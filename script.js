@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const listQuizdata = [
     {
-      listName: "Världsfrågor",  // A custom name for the question list that will be displayed on the question list button
-      answerDisplay: "vertically",  // A custom name for the question list that will be displayed on the question list button
-      answerOptions: true,  // If true, adds an index (1, 2, 3, etc.) in front of each answer alternative; if false, answer alternatives will be displayed without an index
+      listName: "Världsfrågor",
+      answerDisplay: "vertically",
+      answerOptions: true,
+      questionKnockout: { 
+        question: "Vad är svaret på den ultimata frågan om livet, universum och allt?",
+        result: 42
+      },
       QuestionList : [
         {    
           question: "Vilken är den högsta berget i världen?",    
@@ -73,6 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
       listName: "Vuxenfrågor till tipspromenad", // A custom name for the question list that will be displayed on the question list button
       answerDisplay: "horizontally", // Determines the layout of the answer alternatives; set to "horizontally" for a side-by-side layout or "vertically" for a top-to-bottom layout
       answerOptions: false, // If true, adds an index (1, 2, 3, etc.) in front of each answer alternative; if false, answer alternatives will be displayed without an index
+      questionKnockout: { 
+        result: 42
+      },
       QuestionList : [
       {    
         question: "Fråga 1",    
@@ -140,6 +147,9 @@ document.addEventListener("DOMContentLoaded", function() {
     listName: "Barnfrågor till tipspromenad", // A custom name for the question list that will be displayed on the question list button
     answerDisplay: "horizontally", // Determines the layout of the answer alternatives; set to "horizontally" for a side-by-side layout or "vertically" for a top-to-bottom layout
     answerOptions: false, // If true, adds an index (1, 2, 3, etc.) in front of each answer alternative; if false, answer alternatives will be displayed without an index
+    questionKnockout: { 
+      result: 42
+    },
     QuestionList : [
       {    
         question: "Fråga 1",    
@@ -206,10 +216,13 @@ document.addEventListener("DOMContentLoaded", function() {
 ];
 
 let currentQuizData = listQuizdata[0].QuestionList; // set quizData as the default
+let currentListData = listQuizdata.find(list => list.QuestionList === currentQuizData);
 
 const quizContainer = document.getElementById("quiz");
 const submitButton = document.getElementById("submitBtn");
-const resultsContainer = document.getElementById("results");
+//const resultsContainer = document.getElementById("results");
+const resultsContainer = document.getElementById("resultsContainer");
+const knockoutResult = document.getElementById("knockoutResult");
 
 // Add event listener for the "Meny" button
 const menyBtn = document.getElementById("menyBtn");
@@ -217,6 +230,14 @@ const questionListModal = document.getElementById("questionListModal");
 const closeModal = document.getElementsByClassName("close")[0];
 
 menyBtn.addEventListener("click", () => {
+  const knockoutAnswerInput = document.getElementById("knockout-answer");
+
+  // Clear the content of on webpage
+  knockoutAnswerInput.disabled = false;
+  knockoutAnswerInput.value = "";
+  resultsContainer.innerHTML = "";
+  knockoutResult.innerHTML = "";
+  
   questionListModal.style.display = "block";
 });
 
@@ -244,7 +265,16 @@ listQuizdata.forEach((quizData, index) => {
 
 function displayQuiz(answerOptions, answerDisplay) {
   const output = [];
-  document.getElementById("listName").textContent = listQuizdata.find(list => list.QuestionList === currentQuizData).listName;
+  currentListData = listQuizdata.find(list => list.QuestionList === currentQuizData);
+  
+  document.getElementById("listName").textContent = currentListData.listName;
+
+  // Update the knockoutQuestionText
+  if (currentListData.questionKnockout) {
+    const knockoutQuestionText = document.getElementById("knockout-question-text");
+    knockoutQuestionText.textContent = currentListData.questionKnockout.question;
+  }
+
   currentQuizData.forEach((currentQuestion, questionNumber) => {
     const answers = [];
 
@@ -291,15 +321,39 @@ function showResults() {
       // Mark the wrong answer red
       answerContainers[questionNumber].style.color = 'red';
     }
+
+    // Add the following lines of code to disable the input elements
+    const radioButtons = document.querySelectorAll("input[type='radio']");
+    radioButtons.forEach((radio) => {
+      radio.disabled = true;
+    });
+
+    const knockoutAnswerInput = document.getElementById("knockout-answer");
+    knockoutAnswerInput.disabled = true;
   });
 
   const language = navigator.language || navigator.userLanguage;
   if (language.startsWith("sv")) {
-    resultsContainer.innerHTML = `Du har besvarat ${numCorrect} av ${currentQuizData.length} frågor korrekt!`;
+    resultsContainer.innerHTML =`<span class="result">Du har besvarat ${numCorrect} av ${currentQuizData.length} frågor korrekt!</span>`;
   } else {
-    resultsContainer.innerHTML = `You got ${numCorrect} out of ${currentQuizData.length} correct!`;
+    resultsContainer.innerHTML = `<span class="result">You got ${numCorrect} out of ${currentQuizData.length} correct!</span>`;
   }
 
+  // Display the knockout result
+  const knockoutAnswer = document.getElementById("knockout-answer").value;
+  const knockoutResult = document.getElementById("knockoutResult");
+  const correctKnockoutAnswer = currentListData.questionKnockout.result;
+  const knockoutDifference = Math.abs(knockoutAnswer - correctKnockoutAnswer);
+
+  if (knockoutAnswer) {
+    if (language.startsWith("sv")) {
+      knockoutResult.innerHTML = `<span class="result">Du svarade ${knockoutAnswer} och rätt svar var ${correctKnockoutAnswer}, så du var ${knockoutDifference} ifrån det korrekta svaret.</span>`;
+    } else {
+      knockoutResult.innerHTML = `<span class="result">You answered ${knockoutAnswer} , correct was ${correctKnockoutAnswer}, so you were ${knockoutDifference}, so you were</span>`;
+    }
+  } else {
+    knockoutResult.innerHTML = "";
+  }
 }
 
 function setSubmitButtonText() {
@@ -307,22 +361,27 @@ function setSubmitButtonText() {
   const submitButton = document.getElementById("submitBtn");
   const menyButton = document.getElementById("menyBtn");
   const questionListHeading = document.getElementById("questionListHeading");
+  const knockoutQuestion = document.getElementById("knockout-question");
+  const knockoutQuestionText = document.getElementById("knockout-question-text");
+
+  const currentListData = listQuizdata.find(list => list.QuestionList === currentQuizData);
+  knockoutQuestionText.textContent = currentListData.questionKnockout.question;
 
   if (language.startsWith("sv")) {
     submitButton.textContent = "Skicka";
     menyButton.textContent = "Välj en frågelista";
     questionListHeading.textContent = "Välj en frågelista:";
+    knockoutQuestion.textContent = "Utslagsfråga";
   } else {
     submitButton.textContent = "Submit";
     menyButton.textContent = "Select a question list";
     questionListHeading.textContent = "Select a question list:";
+    knockoutQuestion.textContent = "Knockout Question";
   }
 }
 
 setSubmitButtonText();
-
 displayQuiz();
-
 submitButton.addEventListener("click", showResults);
 
 });
