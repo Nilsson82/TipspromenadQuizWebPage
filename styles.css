@@ -29,6 +29,7 @@ body {
 /* Headings */
 h1 {
   font-size: 2rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: center;
 }
