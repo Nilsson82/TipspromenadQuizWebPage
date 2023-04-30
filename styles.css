@@ -129,6 +129,10 @@ input[type="radio"]:checked:before {
   padding: 0.5rem;
 }
 
+.incorrect-answer {
+  color: red;
+}
+
 .meny-btn {
   position: fixed;
   top: 1rem;
@@ -227,3 +231,4 @@ input[type="radio"]:checked:before {
 #knockoutResult {
   display: block;
 }
+

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const language = navigator.language || navigator.userLanguage;
     const languageCode = language.split("-")[0];
     const jsonDataUrl = `https://raw.githubusercontent.com/Nilsson82/TipspromenadQuizWebPage/main/Data/data_${languageCode}.json`;
-    console.log(jsonDataUrl);
 
     fetchQuizData(jsonDataUrl).then((fetchedData) => {
       listQuizdata = fetchedData;
@@ -133,36 +132,46 @@ function initQuiz() {
   function showResults() {
     const answerContainers = quizContainer.querySelectorAll(".answers");
     let numCorrect = 0;
-
+  
     currentQuizData.forEach((currentQuestion, questionNumber) => {
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
+  
       const correctAnswerIndex = currentQuestion.answers.indexOf(
         currentQuestion.correctAnswer
       );
-
+  
       if (userAnswer == correctAnswerIndex) {
         numCorrect++;
-
-        // Mark the correct answer green
-        answerContainers[questionNumber].style.color = "green";
+  
+        // Apply the correct CSS class
+        answerContainers[questionNumber].classList.add("correct");
       } else {
-        // Mark the wrong answer red
-        answerContainers[questionNumber].style.color = "red";
+        // Apply the incorrect CSS class
+        answerContainers[questionNumber].classList.add("incorrect");
       }
-
+  
+      // Add the following loop to mark answers with correct and incorrect CSS classes
+      const answerLabels = answerContainer.querySelectorAll("label");
+      answerLabels.forEach((label, answerIndex) => {
+        if (answerIndex == correctAnswerIndex) {
+          label.classList.add("correct-answer");
+        } else if (answerIndex == userAnswer) {
+          label.classList.add("incorrect-answer");
+        }
+      });
+  
       // Add the following lines of code to disable the input elements
       const radioButtons = document.querySelectorAll("input[type='radio']");
       radioButtons.forEach((radio) => {
         radio.disabled = true;
       });
-
+  
       const knockoutAnswerInput = document.getElementById("knockout-answer");
       knockoutAnswerInput.disabled = true;
     });
-
+  
     const language = navigator.language || navigator.userLanguage;
     if (language.startsWith("sv")) {
       resultsContainer.innerHTML = `<span class="result">Du har besvarat ${numCorrect} av ${currentQuizData.length} frågor korrekt!</span>`;
