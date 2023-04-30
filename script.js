@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // If listQuizdata is empty, fetch data from the external JSON file
   if (listQuizdata.length === 0) {
     const language = navigator.language || navigator.userLanguage;
-    const jsonDataUrl = `https://raw.githubusercontent.com/Nilsson82/TipspromenadQuizWebPage/main/Data/data_${language}.json`;
+    const languageCode = language.split("-")[0];
+    const jsonDataUrl = `https://raw.githubusercontent.com/Nilsson82/TipspromenadQuizWebPage/main/Data/data_${languageCode}.json`;
+    console.log(jsonDataUrl);
 
     fetchQuizData(jsonDataUrl).then((fetchedData) => {
       listQuizdata = fetchedData;
