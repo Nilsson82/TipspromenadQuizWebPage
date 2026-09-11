@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:tipspromenad:schema:quiz-snapshot:1",
+  "title": "Tipspromenad immutable quiz snapshot, version 1 (design draft)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "quizId", "snapshotId", "bankId", "bankRevision", "names", "language", "supportedLanguages", "contentFallback", "questions", "questionOrder", "answerOrder", "settings"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "quiz" },
+    "quizId": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" },
+    "snapshotId": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" },
+    "bankId": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" },
+    "bankRevision": { "type": "string", "minLength": 1 },
+    "names": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/localizedText" },
+    "descriptions": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/localizedText" },
+    "language": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/language" },
+    "supportedLanguages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/language" }
+    },
+    "contentFallback": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["allowed"], "properties": { "allowed": { "const": false } } },
+        {
+          "type": "object", "additionalProperties": false, "required": ["allowed", "language"],
+          "properties": { "allowed": { "const": true }, "language": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/language" } }
+        }
+      ]
+    },
+    "questions": { "type": "array", "minItems": 1, "items": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/publicQuestion" } },
+    "questionOrder": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" } },
+    "answerOrder": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" },
+      "additionalProperties": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" } }
+    },
+    "tieBreaker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "translations", "answerType"],
+      "properties": {
+        "id": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" },
+        "translations": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/localizedText" },
+        "answerType": { "const": "number" },
+        "unit": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/localizedText" },
+        "correctAnswer": { "type": "number" },
+        "tolerance": { "type": "number", "minimum": 0 }
+      }
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "correction", "answerFormat", "allowPrevious", "allowManualSkip"],
+      "properties": {
+        "mode": { "enum": ["classic", "sequential", "gps-walk", "gps-station"] },
+        "answerFormat": { "enum": ["1-X-2", "numeric", "alphabetic", "none"] },
+        "answerDisplay": { "enum": ["vertically", "horizontally"] },
+        "allowPrevious": { "type": "boolean" },
+        "allowManualSkip": { "type": "boolean" },
+        "walkDistanceMetres": { "type": "number", "exclusiveMinimum": 0 },
+        "correction": {
+          "oneOf": [
+            { "type": "object", "additionalProperties": false, "required": ["mode", "feedback"], "properties": { "mode": { "const": "direct" }, "feedback": { "enum": ["after-finish", "after-answer"] } } },
+            { "type": "object", "additionalProperties": false, "required": ["mode", "answerKeyId"], "properties": { "mode": { "enum": ["code", "qr"] }, "answerKeyId": { "$ref": "urn:tipspromenad:schema:question-bank:1#/$defs/id" } } }
+          ]
+        }
+      },
+      "allOf": [
+        { "if": { "properties": { "mode": { "const": "gps-walk" } } }, "then": { "required": ["walkDistanceMetres"] } }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "settings": { "properties": { "correction": { "properties": { "mode": { "const": "direct" } } } } } } },
+      "then": {
+        "properties": {
+          "questions": { "items": { "required": ["correctAnswerId"] } },
+          "tieBreaker": { "required": ["correctAnswer"] }
+        }
+      },
+      "else": {
+        "properties": {
+          "questions": { "items": { "not": { "required": ["correctAnswerId"] } } },
+          "tieBreaker": { "not": { "required": ["correctAnswer"] } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "settings": { "properties": { "mode": { "const": "gps-station" } } } } },
+      "then": { "properties": { "questions": { "items": { "required": ["gps"] } } } }
+    }
+  ]
+}

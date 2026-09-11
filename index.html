@@ -7,27 +7,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <button id="menyBtn" class="meny-btn">Help</button>
+    <main class="container">
       <h1>Tipspromenad Quiz</h1>
-      <h2 id="listName"></h2>
-      <div id="quiz"></div>
-      <div class="quiz-question">
-        <h2 id="knockout-question"></h2>
-        <p id="knockout-question-text"></p>
-        <input type="number" id="knockout-answer" required />
-      </div>
-      <button id="submitBtn" class="submit-button">Submit</button>
-      <div id="resultsContainer"></div>
-      <div id="knockoutResult"></div>
-    </div>
+      <p role="status">Loading…</p>
+    </main>
+    <noscript>JavaScript is required to answer the quiz.</noscript>
+    <script src="lib/quiz-core.js"></script>
+    <script src="lib/i18n.js"></script>
+    <script src="lib/quiz-ui.js"></script>
     <script src="script.js"></script>
-    <div id="questionListModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="questionListHeading"></h2>
-        <div id="questionListContainer"></div>
-      </div>
-    </div>
   </body>
 </html>

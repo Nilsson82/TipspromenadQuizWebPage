@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "starter-nature-space",
+  "names": {
+    "en": "Nature, space and shapes",
+    "sv": "Natur, rymden och former",
+    "es": "Naturaleza, espacio y formas",
+    "da": "Natur, rummet og former",
+    "no": "Natur, verdensrommet og former",
+    "fi": "Luonto, avaruus ja muodot"
+  },
+  "descriptions": {
+    "en": "Six short questions for everyone, available in all six languages.",
+    "sv": "Sex korta frågor för alla, tillgängliga på alla sex språk.",
+    "es": "Seis preguntas breves para todos, disponibles en los seis idiomas.",
+    "da": "Seks korte spørgsmål for alle, tilgængelige på alle seks sprog.",
+    "no": "Seks korte spørsmål for alle, tilgjengelige på alle seks språk.",
+    "fi": "Kuusi lyhyttä kysymystä kaikille, saatavilla kaikilla kuudella kielellä."
+  },
+  "questions": [
+    {
+      "id": "triangle-sides",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["geometry", "shapes"],
+      "correctAnswerId": "three",
+      "translations": {
+        "en": {
+          "question": "How many sides does a triangle have?",
+          "answers": [{"id":"three","text":"Three"},{"id":"four","text":"Four"},{"id":"five","text":"Five"}],
+          "explanation": "A triangle is a shape with three straight sides."
+        },
+        "sv": {
+          "question": "Hur många sidor har en triangel?",
+          "answers": [{"id":"three","text":"Tre"},{"id":"four","text":"Fyra"},{"id":"five","text":"Fem"}],
+          "explanation": "En triangel är en figur med tre raka sidor."
+        },
+        "es": {
+          "question": "¿Cuántos lados tiene un triángulo?",
+          "answers": [{"id":"three","text":"Tres"},{"id":"four","text":"Cuatro"},{"id":"five","text":"Cinco"}],
+          "explanation": "Un triángulo es una figura con tres lados rectos."
+        },
+        "da": {
+          "question": "Hvor mange sider har en trekant?",
+          "answers": [{"id":"three","text":"Tre"},{"id":"four","text":"Fire"},{"id":"five","text":"Fem"}],
+          "explanation": "En trekant er en figur med tre rette sider."
+        },
+        "no": {
+          "question": "Hvor mange sider har en trekant?",
+          "answers": [{"id":"three","text":"Tre"},{"id":"four","text":"Fire"},{"id":"five","text":"Fem"}],
+          "explanation": "En trekant er en figur med tre rette sider."
+        },
+        "fi": {
+          "question": "Kuinka monta sivua kolmiossa on?",
+          "answers": [{"id":"three","text":"Kolme"},{"id":"four","text":"Neljä"},{"id":"five","text":"Viisi"}],
+          "explanation": "Kolmio on kuvio, jossa on kolme suoraa sivua."
+        }
+      }
+    },
+    {
+      "id": "water-formula",
+      "category": "science",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["chemistry", "water"],
+      "correctAnswerId": "water",
+      "translations": {
+        "en": {
+          "question": "What is the chemical formula for water?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "A water molecule contains two hydrogen atoms and one oxygen atom."
+        },
+        "sv": {
+          "question": "Vilken är den kemiska formeln för vatten?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "En vattenmolekyl innehåller två väteatomer och en syreatom."
+        },
+        "es": {
+          "question": "¿Cuál es la fórmula química del agua?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "Una molécula de agua contiene dos átomos de hidrógeno y uno de oxígeno."
+        },
+        "da": {
+          "question": "Hvad er den kemiske formel for vand?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "Et vandmolekyle indeholder to brintatomer og ét iltatom."
+        },
+        "no": {
+          "question": "Hva er den kjemiske formelen for vann?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "Et vannmolekyl inneholder to hydrogenatomer og ett oksygenatom."
+        },
+        "fi": {
+          "question": "Mikä on veden kemiallinen kaava?",
+          "answers": [{"id":"carbon-dioxide","text":"CO₂"},{"id":"water","text":"H₂O"},{"id":"oxygen","text":"O₂"}],
+          "explanation": "Vesimolekyylissä on kaksi vetyatomia ja yksi happiatomi."
+        }
+      }
+    },
+    {
+      "id": "planet-nearest-sun",
+      "category": "space",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["planets", "solar-system"],
+      "correctAnswerId": "mercury",
+      "translations": {
+        "en": {
+          "question": "Which planet is nearest to the Sun?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Mars"},{"id":"mercury","text":"Mercury"}],
+          "explanation": "Mercury is the innermost planet in our solar system."
+        },
+        "sv": {
+          "question": "Vilken planet ligger närmast solen?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Mars"},{"id":"mercury","text":"Merkurius"}],
+          "explanation": "Merkurius är den innersta planeten i vårt solsystem."
+        },
+        "es": {
+          "question": "¿Qué planeta está más cerca del Sol?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Marte"},{"id":"mercury","text":"Mercurio"}],
+          "explanation": "Mercurio es el planeta más cercano al Sol en nuestro sistema solar."
+        },
+        "da": {
+          "question": "Hvilken planet ligger tættest på Solen?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Mars"},{"id":"mercury","text":"Merkur"}],
+          "explanation": "Merkur er den inderste planet i vores solsystem."
+        },
+        "no": {
+          "question": "Hvilken planet ligger nærmest solen?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Mars"},{"id":"mercury","text":"Merkur"}],
+          "explanation": "Merkur er den innerste planeten i solsystemet vårt."
+        },
+        "fi": {
+          "question": "Mikä planeetta on lähimpänä Aurinkoa?",
+          "answers": [{"id":"venus","text":"Venus"},{"id":"mars","text":"Mars"},{"id":"mercury","text":"Merkurius"}],
+          "explanation": "Merkurius on aurinkokuntamme sisin planeetta."
+        }
+      }
+    },
+    {
+      "id": "earth-natural-satellite",
+      "category": "space",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["earth", "moon"],
+      "correctAnswerId": "moon",
+      "translations": {
+        "en": {
+          "question": "Which of these is Earth's natural satellite?",
+          "answers": [{"id":"moon","text":"The Moon"},{"id":"sun","text":"The Sun"},{"id":"mars","text":"Mars"}],
+          "explanation": "The Moon orbits Earth and is its natural satellite."
+        },
+        "sv": {
+          "question": "Vilken av dessa är jordens naturliga satellit?",
+          "answers": [{"id":"moon","text":"Månen"},{"id":"sun","text":"Solen"},{"id":"mars","text":"Mars"}],
+          "explanation": "Månen kretsar runt jorden och är dess naturliga satellit."
+        },
+        "es": {
+          "question": "¿Cuál de estos astros es el satélite natural de la Tierra?",
+          "answers": [{"id":"moon","text":"La Luna"},{"id":"sun","text":"El Sol"},{"id":"mars","text":"Marte"}],
+          "explanation": "La Luna orbita alrededor de la Tierra y es su satélite natural."
+        },
+        "da": {
+          "question": "Hvilken af disse er Jordens naturlige satellit?",
+          "answers": [{"id":"moon","text":"Månen"},{"id":"sun","text":"Solen"},{"id":"mars","text":"Mars"}],
+          "explanation": "Månen kredser om Jorden og er dens naturlige satellit."
+        },
+        "no": {
+          "question": "Hvilken av disse er jordens naturlige satellitt?",
+          "answers": [{"id":"moon","text":"Månen"},{"id":"sun","text":"Solen"},{"id":"mars","text":"Mars"}],
+          "explanation": "Månen går i bane rundt jorden og er dens naturlige satellitt."
+        },
+        "fi": {
+          "question": "Mikä näistä on Maan luonnollinen kiertolainen?",
+          "answers": [{"id":"moon","text":"Kuu"},{"id":"sun","text":"Aurinko"},{"id":"mars","text":"Mars"}],
+          "explanation": "Kuu kiertää Maata ja on sen luonnollinen kiertolainen."
+        }
+      }
+    },
+    {
+      "id": "photosynthesis-gas",
+      "category": "nature",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["plants", "photosynthesis"],
+      "correctAnswerId": "carbon-dioxide",
+      "translations": {
+        "en": {
+          "question": "Which gas do green plants take in from the air for photosynthesis?",
+          "answers": [{"id":"oxygen","text":"Oxygen"},{"id":"carbon-dioxide","text":"Carbon dioxide"},{"id":"helium","text":"Helium"}],
+          "explanation": "During photosynthesis, plants use carbon dioxide, water and light to make sugars."
+        },
+        "sv": {
+          "question": "Vilken gas tar gröna växter upp ur luften för fotosyntesen?",
+          "answers": [{"id":"oxygen","text":"Syre"},{"id":"carbon-dioxide","text":"Koldioxid"},{"id":"helium","text":"Helium"}],
+          "explanation": "Vid fotosyntesen använder växter koldioxid, vatten och ljus för att bilda socker."
+        },
+        "es": {
+          "question": "¿Qué gas absorben del aire las plantas verdes para realizar la fotosíntesis?",
+          "answers": [{"id":"oxygen","text":"Oxígeno"},{"id":"carbon-dioxide","text":"Dióxido de carbono"},{"id":"helium","text":"Helio"}],
+          "explanation": "Durante la fotosíntesis, las plantas utilizan dióxido de carbono, agua y luz para producir azúcares."
+        },
+        "da": {
+          "question": "Hvilken gas optager grønne planter fra luften til fotosyntesen?",
+          "answers": [{"id":"oxygen","text":"Ilt"},{"id":"carbon-dioxide","text":"Kuldioxid"},{"id":"helium","text":"Helium"}],
+          "explanation": "Ved fotosyntesen bruger planter kuldioxid, vand og lys til at danne sukker."
+        },
+        "no": {
+          "question": "Hvilken gass tar grønne planter opp fra luften til fotosyntesen?",
+          "answers": [{"id":"oxygen","text":"Oksygen"},{"id":"carbon-dioxide","text":"Karbondioksid"},{"id":"helium","text":"Helium"}],
+          "explanation": "I fotosyntesen bruker planter karbondioksid, vann og lys til å lage sukker."
+        },
+        "fi": {
+          "question": "Mitä kaasua vihreät kasvit ottavat ilmasta yhteyttämistä varten?",
+          "answers": [{"id":"oxygen","text":"Happea"},{"id":"carbon-dioxide","text":"Hiilidioksidia"},{"id":"helium","text":"Heliumia"}],
+          "explanation": "Yhteyttämisessä kasvit käyttävät hiilidioksidia, vettä ja valoa sokerien valmistamiseen."
+        }
+      }
+    },
+    {
+      "id": "spider-legs",
+      "category": "nature",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["animals", "spiders"],
+      "correctAnswerId": "eight",
+      "translations": {
+        "en": {
+          "question": "How many legs does a spider normally have?",
+          "answers": [{"id":"four","text":"Four"},{"id":"six","text":"Six"},{"id":"eight","text":"Eight"}],
+          "explanation": "Spiders have eight legs. Insects have six."
+        },
+        "sv": {
+          "question": "Hur många ben har en spindel normalt?",
+          "answers": [{"id":"four","text":"Fyra"},{"id":"six","text":"Sex"},{"id":"eight","text":"Åtta"}],
+          "explanation": "Spindlar har åtta ben. Insekter har sex."
+        },
+        "es": {
+          "question": "¿Cuántas patas tiene normalmente una araña?",
+          "answers": [{"id":"four","text":"Cuatro"},{"id":"six","text":"Seis"},{"id":"eight","text":"Ocho"}],
+          "explanation": "Las arañas tienen ocho patas. Los insectos tienen seis."
+        },
+        "da": {
+          "question": "Hvor mange ben har en edderkop normalt?",
+          "answers": [{"id":"four","text":"Fire"},{"id":"six","text":"Seks"},{"id":"eight","text":"Otte"}],
+          "explanation": "Edderkopper har otte ben. Insekter har seks."
+        },
+        "no": {
+          "question": "Hvor mange bein har en edderkopp normalt?",
+          "answers": [{"id":"four","text":"Fire"},{"id":"six","text":"Seks"},{"id":"eight","text":"Åtte"}],
+          "explanation": "Edderkopper har åtte bein. Insekter har seks."
+        },
+        "fi": {
+          "question": "Kuinka monta jalkaa hämähäkillä yleensä on?",
+          "answers": [{"id":"four","text":"Neljä"},{"id":"six","text":"Kuusi"},{"id":"eight","text":"Kahdeksan"}],
+          "explanation": "Hämähäkeillä on kahdeksan jalkaa. Hyönteisillä on kuusi."
+        }
+      }
+    }
+  ]
+}

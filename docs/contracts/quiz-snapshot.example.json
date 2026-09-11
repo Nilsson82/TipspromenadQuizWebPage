@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "quiz",
+  "quizId": "example-quiz",
+  "snapshotId": "example-quiz-snapshot-001",
+  "bankId": "example-bank",
+  "bankRevision": "example-1",
+  "names": { "en": "Two example questions", "sv": "Två exempelfrågor" },
+  "language": "sv",
+  "supportedLanguages": ["en", "sv"],
+  "contentFallback": { "allowed": false },
+  "questions": [
+    {
+      "id": "example-math-sum-001",
+      "revision": "1",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["arithmetic"],
+      "correctAnswerId": "four",
+      "translations": {
+        "en": { "question": "What is 2 + 2?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" } ], "explanation": "Two plus two equals four." },
+        "sv": { "question": "Vad är 2 + 2?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" } ], "explanation": "Två plus två är fyra." }
+      }
+    },
+    {
+      "id": "example-math-square-001",
+      "revision": "1",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["geometry"],
+      "correctAnswerId": "four",
+      "translations": {
+        "en": { "question": "How many sides does a square have?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" }, { "id": "six", "text": "6" } ] },
+        "sv": { "question": "Hur många sidor har en kvadrat?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" }, { "id": "six", "text": "6" } ] }
+      }
+    }
+  ],
+  "questionOrder": ["example-math-square-001", "example-math-sum-001"],
+  "answerOrder": {
+    "example-math-square-001": ["five", "three", "four", "six"],
+    "example-math-sum-001": ["five", "four", "three"]
+  },
+  "tieBreaker": {
+    "id": "example-tie-days-001",
+    "translations": { "en": "How many days are there in a week?", "sv": "Hur många dagar har en vecka?" },
+    "answerType": "number",
+    "correctAnswer": 7,
+    "tolerance": 0
+  },
+  "settings": {
+    "mode": "classic",
+    "correction": { "mode": "direct", "feedback": "after-finish" },
+    "answerFormat": "numeric",
+    "answerDisplay": "vertically",
+    "allowPrevious": true,
+    "allowManualSkip": false
+  }
+}

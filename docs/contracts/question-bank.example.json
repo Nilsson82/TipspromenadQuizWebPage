@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "example-bank",
+  "revision": "example-1",
+  "names": { "en": "Example questions", "sv": "Exempelfrågor" },
+  "descriptions": { "en": "A contract example, not a complete quiz pack.", "sv": "Ett kontraktsexempel, inte ett komplett frågepaket." },
+  "categories": [ { "id": "mathematics", "names": { "en": "Mathematics", "sv": "Matematik" } } ],
+  "questions": [
+    {
+      "id": "example-math-sum-001",
+      "revision": "1",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["arithmetic"],
+      "correctAnswerId": "four",
+      "translations": {
+        "en": { "question": "What is 2 + 2?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" } ], "explanation": "Two plus two equals four." },
+        "sv": { "question": "Vad är 2 + 2?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" } ], "explanation": "Två plus två är fyra." }
+      }
+    },
+    {
+      "id": "example-math-square-001",
+      "revision": "1",
+      "category": "mathematics",
+      "difficulty": "easy",
+      "audience": "all",
+      "tags": ["geometry"],
+      "correctAnswerId": "four",
+      "translations": {
+        "en": { "question": "How many sides does a square have?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" }, { "id": "six", "text": "6" } ] },
+        "sv": { "question": "Hur många sidor har en kvadrat?", "answers": [ { "id": "three", "text": "3" }, { "id": "four", "text": "4" }, { "id": "five", "text": "5" }, { "id": "six", "text": "6" } ] }
+      }
+    }
+  ]
+}
