@@ -1,0 +1,4 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),M=require('../lib/walk-motion');
+test('persistent deadline survives paused timer and app recreation',()=>{assert.equal(M.remaining(180000,1000),179);assert.equal(M.remaining(180000,200000),0);});
+test('slow GPS steps accumulate; poor accuracy and impossible jumps do not',()=>{let p={latitude:0,longitude:0,accuracy:4,time:1000},total=0;for(let i=1;i<=20;i++){const next=M.advance(p,{latitude:i*0.00001,longitude:0,accuracy:4,time:1000+i*1000},total);p=next.previous;total=next.total;}assert(total>15&&total<25);assert.equal(M.advance(p,{...p,latitude:20,time:p.time+1000},total).total,total);assert.equal(M.advance(p,{...p,latitude:1,accuracy:100,time:p.time+1000},total).total,total);});
+test('resuming after a GPS gap resets baseline without counting unobserved distance',()=>{const p={latitude:0,longitude:0,accuracy:5,time:0};assert.equal(M.advance(p,{...p,latitude:.01,time:60000},10).total,10);});

@@ -1,6 +1,13 @@
 // Existing classic quiz flow; shared modules separate data, localization and UI.
 document.addEventListener('DOMContentLoaded', async () => {
+  if ('serviceWorker' in navigator && location.hostname !== 'appassets.androidplatform.net') {
+    navigator.serviceWorker.register('service-worker.js').catch(error=>console.warn('Offline cache unavailable',error));
+  }
   try {
+    if (new URLSearchParams(location.search).get('mode') !== 'classic') {
+      await WalkUI.mount(document.querySelector('.container'));
+      return;
+    }
     await QuizUI.mount({
       host: document.querySelector('.container'), storageId: 'quiz-web-page',
       async loadCollections(language) {

@@ -1,46 +1,72 @@
-# Tipspromenad Quiz Web Page
+# Tipspromenad participant website
 
-Incremental update of `Nilsson82/TipspromenadQuizWebPage`. The existing classic quiz, list selection, answer layouts, direct scoring, images and optional numerical tie-breaker remain. No framework, backend or account is required.
+**[Open Tipspromenad in your browser](https://nilsson82.github.io/TipspromenadQuizWebPage/)**
 
-## Languages
+[Android app](https://github.com/Nilsson82/Tipspromenad-app-for-Android) · [Shared question database](https://github.com/Nilsson82/Tipspromenad)
 
-Choose UI and question languages independently: English, Swedish, Spanish, Danish, Norwegian Bokmål and Finnish. Codes: `en`, `sv`, `es`, `da`, `no`, `fi`. Aliases `se`/`dk` and Norwegian `nb`/`nn` are accepted. UI falls back to English; question content never switches language silently.
+## Screenshots
 
-Original `Data/data_en.json`, `data_es.json`, `data_sv.json` remain unchanged (four lists each). New `Data/multilingual.json` has **six questions in all six languages**. It is not a translation of the entire original bank. Old data needs editorial review; new translations have not had native-editor review.
+Actual browser screenshots of this version. The website uses the same menu and quiz presentation as Android; creating and managing shared quizzes is available in the Android app.
 
-Use `?ui=sv&quizLang=fi` for Swedish UI and Finnish questions. Android uses these parameters, which override browser preferences. Without parameters, UI follows saved preference/browser language; questions start in English or the previously selected language. Answers, selected list, tie-breaker and results are saved locally against a data fingerprint. Clearing browser data removes progress; storage may be unavailable in private browsing.
+![Website main menu with Random Quiz, Join Friend Quiz and Classic Quizzes](docs/screenshots/web-home.png)
+
+![Random quiz corrected in place, highlighting correct answers in green and incorrect selections in red](docs/screenshots/web-results.png)
+
+## Latest behavior
+
+- Clean menu without numbered tiles; options are in the top-right **⋮ Settings** menu.
+- Random Quiz uses saved settings and starts without a participant name.
+- Finish corrects the existing question sheet, highlights correct answers and marks wrong choices red. A score line replaces the finish button.
+- Shared quizzes remember the previous participant name locally and show it above the questions.
+- Six interface languages, portable quiz/result QR codes, and classic quizzes remain available.
+
+
+Static participant website plus the shared runtime bundled in the Android app. No backend, accounts or dependency installation.
+
+The website offers **Random Quiz**, **Join Friend Quiz**, and the existing **Classic Quizzes**. Android additionally exposes Create Quiz and organizer result collection. Participants scan or paste a portable `TIPQ1.` code, enter their name, answer questions and return a `TIPR1.` result QR/code. These are complete offline payloads, not very short lookup keys. Future Wi-Fi lookup is not implemented.
+
+Settings is in the top-right three-dot menu. App language and question language are independent; en/sv/es/da/no/fi are supported. New question selections use 2/3/4 visible answers derived deterministically from four stored options. The canonical bank currently has 25 selectable questions in en/sv/es and six in da/no/fi. Insufficient pools and incompatible revisions fail explicitly.
 
 ## Run and test
 
-Node.js 18 or later; no dependencies to install:
+Node 22 or newer; no packages required:
 
 ```sh
 node tools/serve.cjs
-node --test tests/core.test.cjs
+node --test tests/*.test.cjs
 ```
 
-Open `http://127.0.0.1:8085`. Serve over HTTP; opening `index.html` directly as `file://` cannot reliably fetch JSON. `npm start` / `npm test` are equivalent shortcuts. No production compilation is needed.
+Preview: `http://127.0.0.1:8085`. Serve via HTTP/HTTPS, not file://. There is no production compilation step. Deploy the repository root on existing GitHub Pages, keeping HTML, CSS, JS, locales, Data and service-worker.js together. Nothing has been pushed or deployed by this development run.
 
-## Upload to GitHub Pages
+A service worker caches the shell and bundled questions after an online visit. Load online before an offline walk and check the target browser; browser cache/storage policies can vary. Classic external images still need internet. Update the service-worker cache version whenever bundled files change. A previous worker can remain active until old tabs close.
 
-Upload/commit this project's files to the existing `Nilsson82/TipspromenadQuizWebPage` repository. Keep `index.html`, `script.js`, `styles.css`, `lib/`, `locales/` and `Data/` together. Publish the repository root with its existing Pages configuration. Nothing has been pushed or published.
+## Structure
 
-In the local Git copy, review `git status` / `git diff` before committing. ZIP delivery excludes `.git` and caches; extract the contents into the existing repository, not into a nested project directory. Verify the published `?ui=sv&quizLang=fi` page before distributing the Android APK.
+- `lib/walk-core.js`: compact formats, database validation, seeded options and scoring.
+- `lib/walk-ui.js`: participant flow and Android organizer UI.
+- `lib/walk-store.js`: device-local IndexedDB records.
+- `lib/walk-motion.js`: foreground distance filtering and timer math.
+- `lib/quiz-core.js`, `lib/quiz-ui.js`, `lib/correction.js`: retained classic behavior.
+- `lib/vendor/`: local QR generator/decoder and notices.
+- `Data/revision-1.json`: immutable distribution from [the canonical question repository](https://github.com/Nilsson82/Tipspromenad).
+- `Data/data_*.json`, `Data/multilingual.json`: retained classic data; no destructive migration.
+- `locales/walk.json`, `locales/ui.json`: UI translations.
 
-## Structure and shared source
+Edit question revisions in Tipspromenad, shared runtime here, then run the Android workspace's `tools/sync-offline-assets.ps1`. Android assets are distributable copies, not a second editing source. This website runs without sibling checkouts.
 
-- `script.js`: entry point and collection loading.
-- `lib/quiz-core.js`: normalization, validation, projection and scoring.
-- `lib/i18n.js`, `locales/ui.json`: centralized UI translations/preferences.
-- `lib/quiz-ui.js`: classic quiz rendering, language controls, saved answers/results.
-- `Data/data_*.json`: original collections; legacy `correctAnswer` is an exact answer **string**, not an index.
-- `Data/multilingual.json`: stable question/answer IDs, translations and explanations.
-- `docs/`: architecture, schema design, migration plan and verification.
+## Privacy and limits
 
-This repository is canonical for shared runtime/dictionary/starter data distributed to the separate Tipspromenad project. The Android workspace's `tools/sync-web-assets.ps1` copies them into that project's `public/`; `-Check` compares SHA-256. Neither deployed project needs its sibling's filesystem. `tools/assets/` in Android retains initial authored assets as provenance, not a second editing source.
+Participant names/answers/results remain in browser storage unless the user shares the result code. No user data is uploaded to the question repository. Optional revision downloads request only public question files. Clearing site data deletes attempts and offline caches. Scores are locally recomputed, but public source answers and unsigned result payloads do not prevent cheating.
 
-## Scope
+See [privacy information](PRIVACY_POLICY.md), [portable format and verification](docs/PORTABLE-WALKS.md), [Source publication notice](LICENSE) and [Android app](https://github.com/Nilsson82/Tipspromenad-app-for-Android). Vendored QR licenses remain in lib/vendor. Legacy facts and translations still need editorial review; physical camera/GPS and cross-browser offline testing remain release checks.
 
-Phase 1 plus schema design. GPS, QR/correction codes, organizers, filters, printing and PWA/offline packs remain planned. Local answer saving is not guaranteed offline support: page/data loading and external images need a network. Missing images are handled gracefully; correct/incorrect answers have text labels as well as colour.
+## Publish updates on GitHub Pages
 
-The original README described this project as MIT licensed; retain upstream licensing when distributing its content.
+1. Commit and push this repository to its `main` branch, including `service-worker.js`, `walk.css`, `lib/`, `locales/`, `Data/`, and `.nojekyll`.
+2. In the GitHub repository, open **Settings → Pages**. Use **Deploy from a branch**, branch **main**, folder **/(root)**, and save.
+3. Wait for **pages build and deployment** in Actions to finish successfully.
+4. Open [the website](https://nilsson82.github.io/TipspromenadQuizWebPage/). No release tag, npm install, or compilation is required.
+
+See [GitHub's publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+The versioned service worker downloads a complete new offline shell. Existing tabs finish using their current version: close all tabs for this site, then reopen it online to activate a waiting update. Do not clear site storage just to update, because that also removes saved participant names and quizzes. Keep bumping the cache name in `service-worker.js` for future runtime/data changes. Screenshots are repository documentation and are not part of the offline quiz cache.

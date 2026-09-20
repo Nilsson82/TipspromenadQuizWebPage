@@ -1,0 +1,1444 @@
+{
+  "schemaVersion": 2,
+  "revision": 1,
+  "categories": [
+    "geography",
+    "history",
+    "culture",
+    "sport",
+    "mathematics",
+    "science",
+    "space",
+    "nature"
+  ],
+  "questions": [
+    {
+      "questionId": 1,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the highest mountain in the world?",
+          "options": [
+            "K2",
+            "Kilimanjaro",
+            "Mount Everest",
+            "Mont Blanc"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vilken är den högsta berget i världen?",
+          "options": [
+            "K2",
+            "Kilimanjaro",
+            "Mount Everest",
+            "Mont Blanc"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es la montaña más alta del mundo?",
+          "options": [
+            "K2",
+            "Kilimanjaro",
+            "Monte Everest",
+            "Mont Blanc"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 2,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest lake in the world?",
+          "options": [
+            "Caspian Sea",
+            "Black Sea",
+            "Baltic Sea",
+            "Dead Sea"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vilken är världens största sjö?",
+          "options": [
+            "Kaspiska havet",
+            "Svarta havet",
+            "Östersjön",
+            "Döda havet"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es el lago más grande del mundo?",
+          "options": [
+            "Mar Caspio",
+            "Mar Negro",
+            "Mar Báltico",
+            "Mar Muerto"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 3,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the longest river in the world?",
+          "options": [
+            "Amazon",
+            "Mississippi",
+            "Nile",
+            "Yellow River"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vilken är världens längsta flod?",
+          "options": [
+            "Amazonas",
+            "Mississippi",
+            "Nilen",
+            "Gula floden"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es el río más largo del mundo?",
+          "options": [
+            "Amazonas",
+            "Misisipi",
+            "Nilo",
+            "Río Amarillo"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": true
+    },
+    {
+      "questionId": 4,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest island in the world?",
+          "options": [
+            "Madagascar",
+            "Greenland",
+            "Borneo",
+            "Australia"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vilken är världens största ö?",
+          "options": [
+            "Madagaskar",
+            "Grönland",
+            "Borneo",
+            "Australien"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Cuál es la isla más grande del mundo?",
+          "options": [
+            "Madagascar",
+            "Groenlandia",
+            "Borneo",
+            "Australia"
+          ],
+          "correctIndex": 1
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 5,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest desert in the world?",
+          "options": [
+            "Sahara",
+            "Gobi",
+            "Atacama",
+            "Arctic"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vilken är världens största öken?",
+          "options": [
+            "Sahara",
+            "Gobi",
+            "Atacama",
+            "Arktis"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es el desierto más grande del mundo?",
+          "options": [
+            "Sahara",
+            "Gobi",
+            "Atacama",
+            "Ártico"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": true
+    },
+    {
+      "questionId": 6,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest country in the world by land area?",
+          "options": [
+            "Canada",
+            "China",
+            "Russia",
+            "USA"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vad är världens största land till ytan?",
+          "options": [
+            "Kanada",
+            "Kina",
+            "Ryssland",
+            "USA"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es el país más grande del mundo por área?",
+          "options": [
+            "Canadá",
+            "China",
+            "Rusia",
+            "EE. UU."
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 7,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the tallest waterfall in the world?",
+          "options": [
+            "Niagara Falls",
+            "Victoria Falls",
+            "Iguazu Falls",
+            "Angel Falls"
+          ],
+          "correctIndex": 3
+        },
+        "sv": {
+          "question": "Vad är världens högsta vattenfall?",
+          "options": [
+            "Niagara Falls",
+            "Victoria Falls",
+            "Iguazu Falls",
+            "Angel Falls"
+          ],
+          "correctIndex": 3
+        },
+        "es": {
+          "question": "¿Cuál es la cascada más alta del mundo?",
+          "options": [
+            "Cataratas del Niágara",
+            "Cataratas Victoria",
+            "Cataratas del Iguazú",
+            "Cataratas del Ángel"
+          ],
+          "correctIndex": 3
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 8,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the most populous country in the world?",
+          "options": [
+            "India",
+            "China",
+            "USA",
+            "Indonesia"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vad är världens största land till befolkning?",
+          "options": [
+            "Indien",
+            "Kina",
+            "USA",
+            "Indonesien"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Cuál es el país más grande del mundo por población?",
+          "options": [
+            "India",
+            "China",
+            "EE. UU.",
+            "Indonesia"
+          ],
+          "correctIndex": 1
+        }
+      },
+      "deprecated": true
+    },
+    {
+      "questionId": 9,
+      "category": "geography",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest ocean in the world?",
+          "options": [
+            "Atlantic",
+            "Indian",
+            "Southern",
+            "Pacific"
+          ],
+          "correctIndex": 3
+        },
+        "sv": {
+          "question": "Vad är världens största ocean?",
+          "options": [
+            "Atlanten",
+            "Indiska oceanen",
+            "Södra oceanen",
+            "Stilla havet"
+          ],
+          "correctIndex": 3
+        },
+        "es": {
+          "question": "¿Cuál es el océano más grande del mundo?",
+          "options": [
+            "Atlántico",
+            "Índico",
+            "Antártico",
+            "Pacífico"
+          ],
+          "correctIndex": 3
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 10,
+      "category": "history",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "In what year did World War II start?",
+          "options": [
+            "1939",
+            "1941",
+            "1943",
+            "1945"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vilket år startade andra världskriget?",
+          "options": [
+            "1939",
+            "1941",
+            "1943",
+            "1945"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+          "options": [
+            "1939",
+            "1941",
+            "1943",
+            "1945"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 11,
+      "category": "culture",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "Who wrote the book \"Mio, My Son\"?",
+          "options": [
+            "Roald Dahl",
+            "Tove Jansson",
+            "Astrid Lindgren",
+            "Michael Ende"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vem skrev boken \"Mio min Mio\"?",
+          "options": [
+            "Roald Dahl",
+            "Tove Jansson",
+            "Astrid Lindgren",
+            "Michael Ende"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Quién escribió el libro \"Mio, mi hijo\"?",
+          "options": [
+            "Roald Dahl",
+            "Tove Jansson",
+            "Astrid Lindgren",
+            "Michael Ende"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 12,
+      "category": "sport",
+      "subcategory": "world",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "Who won the 2018 FIFA World Cup?",
+          "options": [
+            "Croatia",
+            "France",
+            "Belgium",
+            "England"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vem vann fotbolls-VM 2018?",
+          "options": [
+            "Kroatien",
+            "Frankrike",
+            "Belgien",
+            "England"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Quién ganó la Copa Mundial de la FIFA 2018?",
+          "options": [
+            "Croacia",
+            "Francia",
+            "Bélgica",
+            "Inglaterra"
+          ],
+          "correctIndex": 1
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 13,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the currency of Venezuela?",
+          "options": [
+            "Bolívar",
+            "Peso",
+            "Dollar",
+            "Euro"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vad heter Venezuelas valuta?",
+          "options": [
+            "Bolívar",
+            "Peso",
+            "Dollar",
+            "Euro"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es la moneda de Venezuela?",
+          "options": [
+            "Bolívar",
+            "Peso",
+            "Dólar",
+            "Euro"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 14,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the highest mountain in Venezuela?",
+          "options": [
+            "Mount Roraima",
+            "Cerro Aconcagua",
+            "Pico Bolivar",
+            "Mount Chimborazo"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vad heter det högsta berget i Venezuela?",
+          "options": [
+            "Mount Roraima",
+            "Cerro Aconcagua",
+            "Pico Bolivar",
+            "Mount Chimborazo"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es la montaña más alta de Venezuela?",
+          "options": [
+            "Monte Roraima",
+            "Cerro Aconcagua",
+            "Pico Bolívar",
+            "Monte Chimborazo"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 15,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest national park in Venezuela?",
+          "options": [
+            "El Ávila National Park",
+            "Morrocoy National Park",
+            "Canaima National Park",
+            "Mochima National Park"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vad heter det största nationalparken i Venezuela?",
+          "options": [
+            "El Ávila National Park",
+            "Morrocoy National Park",
+            "Canaima National Park",
+            "Mochima National Park"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es el parque nacional más grande de Venezuela?",
+          "options": [
+            "Parque nacional El Ávila",
+            "Parque nacional Morrocoy",
+            "Parque nacional Canaima",
+            "Parque nacional Mochima"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 16,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "Which country does not border Venezuela?",
+          "options": [
+            "Colombia",
+            "Brazil",
+            "Guyana",
+            "Ecuador"
+          ],
+          "correctIndex": 3
+        },
+        "sv": {
+          "question": "Vilket land gränsar inte till Venezuela?",
+          "options": [
+            "Colombia",
+            "Brasilien",
+            "Guyana",
+            "Ecuador"
+          ],
+          "correctIndex": 3
+        },
+        "es": {
+          "question": "¿Cuál país no hace frontera con Venezuela?",
+          "options": [
+            "Colombia",
+            "Brasil",
+            "Guyana",
+            "Ecuador"
+          ],
+          "correctIndex": 3
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 17,
+      "category": "sport",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the most popular sport in Venezuela?",
+          "options": [
+            "Baseball",
+            "Football",
+            "Basketball",
+            "Volleyball"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vad är det populäraste sporten i Venezuela?",
+          "options": [
+            "Baseboll",
+            "Fotboll",
+            "Basket",
+            "Volleyboll"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es el deporte más popular en Venezuela?",
+          "options": [
+            "Béisbol",
+            "Fútbol",
+            "Baloncesto",
+            "Voleibol"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 18,
+      "category": "history",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "In which year did Venezuela become independent from Spain?",
+          "options": [
+            "1810",
+            "1821",
+            "1830",
+            "1840"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vilket år blev Venezuela självständigt från Spanien?",
+          "options": [
+            "1810",
+            "1821",
+            "1830",
+            "1840"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿En qué año Venezuela obtuvo su independencia de España?",
+          "options": [
+            "1810",
+            "1821",
+            "1830",
+            "1840"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": true
+    },
+    {
+      "questionId": 19,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest river in Venezuela?",
+          "options": [
+            "Amazonas",
+            "Orinoco",
+            "Parana",
+            "Magdalena"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vilken är den största floden i Venezuela?",
+          "options": [
+            "Amazonas",
+            "Orinoco",
+            "Parana",
+            "Magdalena"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Cuál es el río más grande de Venezuela?",
+          "options": [
+            "Amazonas",
+            "Orinoco",
+            "Paraná",
+            "Magdalena"
+          ],
+          "correctIndex": 1
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 20,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is Venezuela's largest export product?",
+          "options": [
+            "Coffee",
+            "Bananas",
+            "Oil",
+            "Gold"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vad är Venezuelas största exportprodukt?",
+          "options": [
+            "Kaffe",
+            "Bananer",
+            "Olja",
+            "Guld"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuál es el producto de exportación más grande de Venezuela?",
+          "options": [
+            "Café",
+            "Plátanos",
+            "Petróleo",
+            "Oro"
+          ],
+          "correctIndex": 2
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 21,
+      "category": "culture",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the famous music style from Venezuela?",
+          "options": [
+            "Salsa",
+            "Reggaeton",
+            "Merengue",
+            "Joropo"
+          ],
+          "correctIndex": 3
+        },
+        "sv": {
+          "question": "Vad heter den berömda musikstilen från Venezuela?",
+          "options": [
+            "Salsa",
+            "Reggaeton",
+            "Merengue",
+            "Joropo"
+          ],
+          "correctIndex": 3
+        },
+        "es": {
+          "question": "¿Cuál es el estilo de música famoso de Venezuela?",
+          "options": [
+            "Salsa",
+            "Reggaetón",
+            "Merengue",
+            "Joropo"
+          ],
+          "correctIndex": 3
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 22,
+      "category": "culture",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the famous national dance in Venezuela?",
+          "options": [
+            "Salsa",
+            "Bachata",
+            "Tango",
+            "Samba"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vad heter den berömda nationaldansen i Venezuela?",
+          "options": [
+            "Salsa",
+            "Bachata",
+            "Tango",
+            "Samba"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es el baile nacional famoso de Venezuela?",
+          "options": [
+            "Salsa",
+            "Bachata",
+            "Tango",
+            "Samba"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": true
+    },
+    {
+      "questionId": 23,
+      "category": "geography",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the largest airport in Venezuela?",
+          "options": [
+            "Simón Bolívar International Airport",
+            "La Chinita International Airport",
+            "Arturo Michelena International Airport",
+            "Juan Vicente Gómez International Airport"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vad heter den största flygplatsen i Venezuela?",
+          "options": [
+            "Simón Bolívar International Airport",
+            "La Chinita International Airport",
+            "Arturo Michelena International Airport",
+            "Juan Vicente Gómez International Airport"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál es el aeropuerto más grande de Venezuela?",
+          "options": [
+            "Aeropuerto Internacional Simón Bolívar",
+            "Aeropuerto Internacional La Chinita",
+            "Aeropuerto Internacional Arturo Michelena",
+            "Aeropuerto Internacional Juan Vicente Gómez"
+          ],
+          "correctIndex": 0
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 24,
+      "category": "culture",
+      "subcategory": "venezuela",
+      "difficulty": 2,
+      "tags": [],
+      "reviewStatus": "legacy-unreviewed",
+      "translations": {
+        "en": {
+          "question": "What is the official language of Venezuela?",
+          "options": [
+            "English",
+            "Spanish",
+            "French",
+            "Portuguese"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vad är Venezuelas officiella språk?",
+          "options": [
+            "Engelska",
+            "Spanska",
+            "Franska",
+            "Portugisiska"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Cuál es el idioma oficial de Venezuela?",
+          "options": [
+            "Inglés",
+            "Español",
+            "Francés",
+            "Portugués"
+          ],
+          "correctIndex": 1
+        }
+      },
+      "deprecated": false
+    },
+    {
+      "questionId": 25,
+      "category": "mathematics",
+      "subcategory": "geometry",
+      "difficulty": 1,
+      "tags": [
+        "geometry",
+        "shapes"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "How many sides does a triangle have?",
+          "options": [
+            "Three",
+            "Four",
+            "Five",
+            "Six"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Hur många sidor har en triangel?",
+          "options": [
+            "Tre",
+            "Fyra",
+            "Fem",
+            "Sex"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuántos lados tiene un triángulo?",
+          "options": [
+            "Tres",
+            "Cuatro",
+            "Cinco",
+            "Seis"
+          ],
+          "correctIndex": 0
+        },
+        "da": {
+          "question": "Hvor mange sider har en trekant?",
+          "options": [
+            "Tre",
+            "Fire",
+            "Fem",
+            "Seks"
+          ],
+          "correctIndex": 0
+        },
+        "no": {
+          "question": "Hvor mange sider har en trekant?",
+          "options": [
+            "Tre",
+            "Fire",
+            "Fem",
+            "Seks"
+          ],
+          "correctIndex": 0
+        },
+        "fi": {
+          "question": "Kuinka monta sivua kolmiossa on?",
+          "options": [
+            "Kolme",
+            "Neljä",
+            "Viisi",
+            "Kuusi"
+          ],
+          "correctIndex": 0
+        }
+      }
+    },
+    {
+      "questionId": 26,
+      "category": "science",
+      "subcategory": "chemistry",
+      "difficulty": 1,
+      "tags": [
+        "chemistry",
+        "water"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "What is the chemical formula for water?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vilken är den kemiska formeln för vatten?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Cuál es la fórmula química del agua?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        },
+        "da": {
+          "question": "Hvad er den kemiske formel for vand?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        },
+        "no": {
+          "question": "Hva er den kjemiske formelen for vann?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        },
+        "fi": {
+          "question": "Mikä on veden kemiallinen kaava?",
+          "options": [
+            "CO₂",
+            "H₂O",
+            "O₂",
+            "NaCl"
+          ],
+          "correctIndex": 1
+        }
+      }
+    },
+    {
+      "questionId": 27,
+      "category": "space",
+      "subcategory": "planets",
+      "difficulty": 1,
+      "tags": [
+        "planets",
+        "solar-system"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "Which planet is nearest to the Sun?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Mercury",
+            "Jupiter"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Vilken planet ligger närmast solen?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Merkurius",
+            "Jupiter"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Qué planeta está más cerca del Sol?",
+          "options": [
+            "Venus",
+            "Marte",
+            "Mercurio",
+            "Júpiter"
+          ],
+          "correctIndex": 2
+        },
+        "da": {
+          "question": "Hvilken planet ligger tættest på Solen?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Merkur",
+            "Jupiter"
+          ],
+          "correctIndex": 2
+        },
+        "no": {
+          "question": "Hvilken planet ligger nærmest solen?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Merkur",
+            "Jupiter"
+          ],
+          "correctIndex": 2
+        },
+        "fi": {
+          "question": "Mikä planeetta on lähimpänä Aurinkoa?",
+          "options": [
+            "Venus",
+            "Mars",
+            "Merkurius",
+            "Jupiter"
+          ],
+          "correctIndex": 2
+        }
+      }
+    },
+    {
+      "questionId": 28,
+      "category": "space",
+      "subcategory": "earth",
+      "difficulty": 1,
+      "tags": [
+        "earth",
+        "moon"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "Which of these is Earth's natural satellite?",
+          "options": [
+            "The Moon",
+            "The Sun",
+            "Mars",
+            "Venus"
+          ],
+          "correctIndex": 0
+        },
+        "sv": {
+          "question": "Vilken av dessa är jordens naturliga satellit?",
+          "options": [
+            "Månen",
+            "Solen",
+            "Mars",
+            "Venus"
+          ],
+          "correctIndex": 0
+        },
+        "es": {
+          "question": "¿Cuál de estos astros es el satélite natural de la Tierra?",
+          "options": [
+            "La Luna",
+            "El Sol",
+            "Marte",
+            "Venus"
+          ],
+          "correctIndex": 0
+        },
+        "da": {
+          "question": "Hvilken af disse er Jordens naturlige satellit?",
+          "options": [
+            "Månen",
+            "Solen",
+            "Mars",
+            "Venus"
+          ],
+          "correctIndex": 0
+        },
+        "no": {
+          "question": "Hvilken av disse er jordens naturlige satellitt?",
+          "options": [
+            "Månen",
+            "Solen",
+            "Mars",
+            "Venus"
+          ],
+          "correctIndex": 0
+        },
+        "fi": {
+          "question": "Mikä näistä on Maan luonnollinen kiertolainen?",
+          "options": [
+            "Kuu",
+            "Aurinko",
+            "Mars",
+            "Venus"
+          ],
+          "correctIndex": 0
+        }
+      }
+    },
+    {
+      "questionId": 29,
+      "category": "nature",
+      "subcategory": "plants",
+      "difficulty": 1,
+      "tags": [
+        "plants",
+        "photosynthesis"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "Which gas do green plants take in from the air for photosynthesis?",
+          "options": [
+            "Oxygen",
+            "Carbon dioxide",
+            "Helium",
+            "Nitrogen"
+          ],
+          "correctIndex": 1
+        },
+        "sv": {
+          "question": "Vilken gas tar gröna växter upp ur luften för fotosyntesen?",
+          "options": [
+            "Syre",
+            "Koldioxid",
+            "Helium",
+            "Kväve"
+          ],
+          "correctIndex": 1
+        },
+        "es": {
+          "question": "¿Qué gas absorben del aire las plantas verdes para realizar la fotosíntesis?",
+          "options": [
+            "Oxígeno",
+            "Dióxido de carbono",
+            "Helio",
+            "Nitrógeno"
+          ],
+          "correctIndex": 1
+        },
+        "da": {
+          "question": "Hvilken gas optager grønne planter fra luften til fotosyntesen?",
+          "options": [
+            "Ilt",
+            "Kuldioxid",
+            "Helium",
+            "Kvælstof"
+          ],
+          "correctIndex": 1
+        },
+        "no": {
+          "question": "Hvilken gass tar grønne planter opp fra luften til fotosyntesen?",
+          "options": [
+            "Oksygen",
+            "Karbondioksid",
+            "Helium",
+            "Nitrogen"
+          ],
+          "correctIndex": 1
+        },
+        "fi": {
+          "question": "Mitä kaasua vihreät kasvit ottavat ilmasta yhteyttämistä varten?",
+          "options": [
+            "Happea",
+            "Hiilidioksidia",
+            "Heliumia",
+            "Typpeä"
+          ],
+          "correctIndex": 1
+        }
+      }
+    },
+    {
+      "questionId": 30,
+      "category": "nature",
+      "subcategory": "animals",
+      "difficulty": 1,
+      "tags": [
+        "animals",
+        "spiders"
+      ],
+      "reviewStatus": "translated-unreviewed",
+      "deprecated": false,
+      "translations": {
+        "en": {
+          "question": "How many legs does a spider normally have?",
+          "options": [
+            "Four",
+            "Six",
+            "Eight",
+            "Ten"
+          ],
+          "correctIndex": 2
+        },
+        "sv": {
+          "question": "Hur många ben har en spindel normalt?",
+          "options": [
+            "Fyra",
+            "Sex",
+            "Åtta",
+            "Tio"
+          ],
+          "correctIndex": 2
+        },
+        "es": {
+          "question": "¿Cuántas patas tiene normalmente una araña?",
+          "options": [
+            "Cuatro",
+            "Seis",
+            "Ocho",
+            "Diez"
+          ],
+          "correctIndex": 2
+        },
+        "da": {
+          "question": "Hvor mange ben har en edderkop normalt?",
+          "options": [
+            "Fire",
+            "Seks",
+            "Otte",
+            "Ti"
+          ],
+          "correctIndex": 2
+        },
+        "no": {
+          "question": "Hvor mange bein har en edderkopp normalt?",
+          "options": [
+            "Fire",
+            "Seks",
+            "Åtte",
+            "Ti"
+          ],
+          "correctIndex": 2
+        },
+        "fi": {
+          "question": "Kuinka monta jalkaa hämähäkillä yleensä on?",
+          "options": [
+            "Neljä",
+            "Kuusi",
+            "Kahdeksan",
+            "Kymmenen"
+          ],
+          "correctIndex": 2
+        }
+      }
+    }
+  ]
+}
