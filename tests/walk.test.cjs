@@ -26,8 +26,8 @@ test('corruption, type mismatch, future versions, revision and missing IDs are r
  const b=Buffer.from(code.split('.')[1],'base64url');b[9]^=1;assert.throws(()=>C.decodeQuiz('TIPQ1.'+b.toString('base64url')),/checksum/);
  assert.throws(()=>C.resolve({...q,revision:99},bank),/revision/);
  assert.throws(()=>C.resolve({...q,questionIds:[16000000]},bank),/missing_question/);
- assert.throws(()=>C.resolve({...q,language:'fi'},bank),/language/);
- assert.throws(()=>C.encodeQuiz({...q,version:2}),/version/);
+ assert.equal(C.resolve({...q,language:'fi'},bank)[0].language,'en');
+ assert.throws(()=>C.encodeQuiz({...q,version:99}),/version/);
  assert.throws(()=>C.decodeQuiz(code+'A'));
 });
 test('create/share/join/play/import/reimport and ranked leaderboard',()=>{

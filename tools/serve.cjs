@@ -13,4 +13,4 @@ http.createServer((request, response) => {
     if (error) { response.writeHead(404).end(); return; }
     response.writeHead(200, {'Content-Type': types[path.extname(file)]}); response.end(data);
   });
-}).listen(8085, '127.0.0.1', () => console.log('Local: http://127.0.0.1:8085'));
+}).listen(Number(process.env.PORT || 8085), '127.0.0.1', () => console.log('Local: http://127.0.0.1:' + (process.env.PORT || 8085)));

@@ -1,0 +1,11 @@
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const C=require('../lib/walk-core'),bank=require('../Data/revision-2.json'),factory=require('../lib/walk-host');
+test('phone host validates join/results, serializes parallel submissions and resumes persisted rooms',async()=>{
+ const records=new Map();const storage={get:async key=>structuredClone(records.get(key)),put:async(key,value)=>records.set(key,structuredClone(value)),list:async prefix=>Array.from(records).filter(([key])=>key.startsWith(prefix)).map(([,value])=>structuredClone(value))};let host=factory(C,storage,async()=>bank);
+ const q=C.create(bank,{name:'LAN test',language:'en',answerCount:4,display:'all',walk:'none',walkValue:0,resultMode:'collect',tieBreakerId:79},[31,32]);const hosted=await host.handle({method:'POST',path:'/api/hosts',data:{code:C.encodeQuiz(q)}});assert.equal(hosted.status,201);const {joinCode,adminToken}=hosted.body;
+ assert.equal((await host.handle({method:'GET',path:'/api/hosts/'+joinCode})).status,403);
+ const submissions=await Promise.all(['First','Second'].map(async name=>{const joined=await host.handle({method:'POST',path:'/api/join',data:{joinCode,name}});assert.equal(joined.body.code,C.encodeQuiz(q));assert.deepEqual(joined.body.bank,bank);const result={version:2,quizId:q.quizId,resultId:C.randomHex(),fingerprint:C.fingerprint(q),name,estimate:name==='First'?40000:40075,answers:C.resolve(q,bank).map(v=>v.correctIndex)};return{joinCode,participantToken:joined.body.participantToken,code:C.encodeResult(result)};}));
+ const request=data=>host.handle({method:'POST',path:'/api/results',data});assert.equal((await request({...submissions[0],participantToken:'bad'})).status,403);
+ assert((await Promise.all(submissions.map(request))).every(r=>r.status===200));assert.equal((await request(submissions[0])).status,200);
+ host=factory(C,storage,async()=>bank);const board=(await host.handle({method:'GET',path:'/api/hosts/'+joinCode,authorization:'Bearer '+adminToken})).body;assert.equal(board.count,2);assert.equal(board.rows[0].name,'Second');assert.equal(board.rows[0].correct,2);assert.equal(board.rows[0].tieDifference,0);assert(board.participants.every(p=>p.completed));
+});

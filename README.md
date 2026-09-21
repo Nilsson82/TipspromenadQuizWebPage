@@ -1,26 +1,5 @@
 # Tipspromenad participant website
 
-**[Open Tipspromenad in your browser](https://nilsson82.github.io/TipspromenadQuizWebPage/)**
-
-[Android app](https://github.com/Nilsson82/Tipspromenad-app-for-Android) · [Shared question database](https://github.com/Nilsson82/Tipspromenad)
-
-## Screenshots
-
-Actual browser screenshots of this version. The website uses the same menu and quiz presentation as Android; creating and managing shared quizzes is available in the Android app.
-
-![Website main menu with Random Quiz, Join Friend Quiz and Classic Quizzes](docs/screenshots/web-home.png)
-
-![Random quiz corrected in place, highlighting correct answers in green and incorrect selections in red](docs/screenshots/web-results.png)
-
-## Latest behavior
-
-- Clean menu without numbered tiles; options are in the top-right **⋮ Settings** menu.
-- Random Quiz uses saved settings and starts without a participant name.
-- Finish corrects the existing question sheet, highlights correct answers and marks wrong choices red. A score line replaces the finish button.
-- Shared quizzes remember the previous participant name locally and show it above the questions.
-- Six interface languages, portable quiz/result QR codes, and classic quizzes remain available.
-
-
 Static participant website plus the shared runtime bundled in the Android app. No backend, accounts or dependency installation.
 
 The website offers **Random Quiz**, **Join Friend Quiz**, and the existing **Classic Quizzes**. Android additionally exposes Create Quiz and organizer result collection. Participants scan or paste a portable `TIPQ1.` code, enter their name, answer questions and return a `TIPR1.` result QR/code. These are complete offline payloads, not very short lookup keys. Future Wi-Fi lookup is not implemented.
@@ -60,13 +39,16 @@ Participant names/answers/results remain in browser storage unless the user shar
 
 See [privacy information](PRIVACY_POLICY.md), [portable format and verification](docs/PORTABLE-WALKS.md), [Source publication notice](LICENSE) and [Android app](https://github.com/Nilsson82/Tipspromenad-app-for-Android). Vendored QR licenses remain in lib/vendor. Legacy facts and translations still need editorial review; physical camera/GPS and cross-browser offline testing remain release checks.
 
-## Publish updates on GitHub Pages
+## Current shared quiz features
 
-1. Commit and push this repository to its `main` branch, including `service-worker.js`, `walk.css`, `lib/`, `locales/`, `Data/`, and `.nojekyll`.
-2. In the GitHub repository, open **Settings → Pages**. Use **Deploy from a branch**, branch **main**, folder **/(root)**, and save.
-3. Wait for **pages build and deployment** in Actions to finish successfully.
-4. Open [the website](https://nilsson82.github.io/TipspromenadQuizWebPage/). No release tag, npm install, or compilation is required.
+Android and WebQuiz support quiz creation, manual/random category selection, difficulty filters, four answer alternatives, participant names and portable quiz/result codes. Numerical tie-breakers appear after normal questions and rank equal scores by absolute difference; they do not increase the normal score.
 
-See [GitHub's publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+Progress gates are optional. Android requires both elapsed time and distance when both are enabled. Next stays disabled until the gate is satisfied and an answer is selected; readiness does not automatically advance. Attempts and gate progress persist locally. GPS measures foreground movement. WebQuiz ignores distance requirements and retains time requirements, with a visible explanation.
 
-The versioned service worker downloads a complete new offline shell. Existing tabs finish using their current version: close all tabs for this site, then reopen it online to activate a waiting update. Do not clear site storage just to update, because that also removes saved participant names and quizzes. Keep bumping the cache name in `service-worker.js` for future runtime/data changes. Screenshots are repository documentation and are not part of the offline quiz cache.
+Experimental local sharing uses the **Android phone as the host**. Start hosting from Experimental Wi-Fi sharing, choose a saved quiz, and share the displayed local address and short room code. Participants open that address on the same Wi-Fi/hotspot. The phone serves the quiz database and collects results locally; no computer or cloud participant service is required. Keep the host service running (visible notification). Results that cannot be sent are saved locally and retried while the participant page is open. Network isolation on some Wi-Fi networks can prevent connections. Automatic discovery is not implemented. Physical phone-to-phone Wi-Fi and outdoor GPS still need real-device testing.
+
+There are 17 selectable language codes: en, sv, es, da, no, fi, is, th, zh, ja, ko, de, fr, it, nl, pt, pl. Translation coverage varies: core navigation, six starter questions and two tie-breakers cover all 17; other missing text falls back to English. Classic quizzes retain the original six languages and use English for newly added languages.
+
+Revision 2 contains 78 normal questions and two numerical tie-breakers, including 48 new normal questions. Existing questions remain, including previously deprecated entries. Published revisions must remain immutable. Online clients check the question repository's latest manifest and verified SHA-256; bundled/cached data supports offline use. Portable codes identify the exact revision and question IDs. LAN joining also transfers that revision's bank, so it works without Internet access.
+
+Participant names and answers are stored locally. Experimental LAN sharing explicitly sends them to the organizer's phone on the local network. Public question data and reference answers are not a secure examination/anti-cheating system.
